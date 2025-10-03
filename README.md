@@ -9,7 +9,7 @@ This project allows you to run a Black Ops 4 Demonware emulator server via Docke
 ⚠️ Important: You must use the Black Ops 4 Project Shield Launcher to connect to the server.
 
 **📦 Project Contents**
-- 🐳 Docker image: `wine-bo4-server:latest`
+- 🐳 Docker image: `mwhax7/wine-bo4-server:latest`
 - 🌐 WebUI: View online players, active lobbies, server uptime, CPU/memory usage, and manage lobbies.
 - 🛠️ Admin WebUI: For managing the server and configuring advanced settings.
 
@@ -33,16 +33,16 @@ This project allows you to run a Black Ops 4 Demonware emulator server via Docke
 
 1. ⚙️ Install Docker and Docker Compose on your machine.
 
-2. 📂 Clone this repository.
+2. 📂 Clone this repository. `git clone https://github.com/mwhax7/wine-bo4-server.git`
 
-3. ✏️ Modify `docker-compose.yml` if you want to change the Admin port (`ADMIN_PORT`) or other configurations.
+4. ✏️ Modify `docker-compose.yml` if you want to change the Admin port (`ADMIN_PORT`) or other configurations.
 
-4. ▶️ Start the server with `docker-compose up -d` command.
+5. ▶️ Start the server with `docker-compose up -d` command.
 
-5. 🌐 Access the main WebUI at http://localhost:8080
+6. 🌐 Access the main WebUI at http://<SERVER_IP>:8080
  to view server and lobby status.
 
-6. 🛠️ Access the Admin WebUI at http://localhost:8045
+7. 🛠️ Access the Admin WebUI at http://<SERVER_IP>:8045
  (or your custom ADMIN_PORT) to manage lobbies.
 
 **🐳 Start the container with `docker run`**
@@ -98,7 +98,7 @@ When launching the game with the Black Ops 4 Project Shield Launcher, you must s
 
 🔗 `ZeroTier` / `VPN IP` – Use the ZeroTier (or other VPN) assigned IP if connecting over a virtual LAN from a remote location.
 
-**Notes:**
+## Notes
 - ⚠️ The server works only with the Black Ops 4 Project Shield Launcher.
 - 🔓 Make sure all critical ports are open in your firewall/router to allow players to connect.
 
