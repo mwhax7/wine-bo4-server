@@ -1,0 +1,198 @@
+<!----WEBPAGE DESIGNED BY BODNJENIE--->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Black Ops 4 Demonware Server Emulator</title>
+        <script src="jquery/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <link href="img/favicon.ico" rel="icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="bootstrap/css/dw.css">
+        <EMBEDDED_RESOURCE>      
+    </head>
+    <body>
+
+        <ACTION_RESULT>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em>
+                <p class="dt">Enable Dark Mode!</p>
+            </em>
+        </div>
+        <script>
+            const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+            const currentTheme = localStorage.getItem('theme');
+            
+            if (currentTheme) {
+             document.documentElement.setAttribute('data-theme', currentTheme);
+            
+             if (currentTheme === 'dark') {
+                 toggleSwitch.checked = true;
+             }
+            }
+            
+            function switchTheme(e) {
+             if (e.target.checked) {
+                 document.documentElement.setAttribute('data-theme', 'dark');
+                 localStorage.setItem('theme', 'dark');
+             }
+             else {        document.documentElement.setAttribute('data-theme', 'light');
+                   localStorage.setItem('theme', 'light');
+             }    
+            }
+            
+            toggleSwitch.addEventListener('change', switchTheme, false);
+            
+             
+        </script>
+        <div class="container-fluid pt-4 px-4">
+            <div class="bg-secondary rounded-top p-4">
+                <div class="row">
+                    <h1 class="text-center">Black Ops 4 Demonware Server Emulator</h1>
+                </div>
+                <div class="col-12 col-sm-6 text-center text-sm-end">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container-fluid pt-4 px-4">
+            <div class="row g-4">
+                <div class="col-sm-6 col-xl">
+                    <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-5">
+                        <i class="fa bi bi-person-fill-add fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">PLAYERS ONLINE</p>
+                            <h6 class="mb-01">
+                                <PLAYER_COUNT_TOTAL>
+                            </h6>                 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl">
+                    <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-5">
+                        <i class="fa bi bi-activity fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">LOBBYS ACTIVE</p>
+                            <h6 class="mb-01">
+                                <LOBBY_COUNT_TOTAL>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl">
+                    <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-5">
+                        <i class="fa bi bi-hourglass fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">SERVER UPTIME</p>
+                            <h6 class="mb-01">
+                                <SERVER_UPTIME_STR>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl">
+                    <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-5">
+                        <i class="fa bi bi-cpu fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">CPU USAGE</p>
+                            <h6 class="mb-01">
+                                0.<CPU_USAGE>%
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl">
+                    <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-5">
+                        <i class="fa bi bi-memory fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">MEMORY USED</p>
+                            <h6 class="mb-01">
+                                <MEMORY_CONSUMPTION>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid pt-4 px-4">
+            <div class="bg-secondary text-center rounded p-4">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h6 class="mb-0">PLAYER LIST</h6>
+                    <a href="">
+                        <h6>SHOW ALL</h6>
+                    </a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table text-start align-middle table-bordered table-hover mb-0">
+                        <thead>
+                            <tr class="text-white">
+                                <th scope="col" class="text-center">PLAYER NAME</th>
+                                <th scope="col" class="text-center">ACTIVITY</th>
+                                <th scope="col" class="text-center">BUILD NAME</th>
+                                <th scope="col" class="text-center">PLAYING SINCE</th>
+                                <th scope="col" class="text-center">NAT TYPE / KICK </th>
+                            </tr>
+                            </td>
+                        </thead>
+                        </tbody>
+                        <tbody>
+                            <PLAYERS_LIST_TABLE>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid pt-4 px-4">
+            <div class="bg-secondary text-center rounded p-4">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h6 class="mb-0">LOBBY LIST</h6>
+                    <a href="">
+                        <h6>SHOW ALL</h6>
+                    </a>
+                </div>
+                <div class="table-responsive2">
+                    <table class="table text-start align-middle table-bordered table-hover mb-0">
+                        <thead>
+                            <tr class="text-white">
+                                <th scope="col" class="text-center">LOBBY NAME & HOST</th>
+                                <th scope="col" class="text-center">BUILD NAME</th>
+                                <th scope="col" class="text-center">MAP NAME</th>
+                                <th scope="col" class="text-center">TOTAL PLAYERS</th>
+                                <th scope="col" class="text-center">KILL / DISBAND</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tbody>
+                            <tr></tr>
+                            <AMM_LOBBIES_TABLE>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid pt-4 px-4">
+            <div class="bg-secondary rounded-top p-4">
+                <div class="row">
+                    <div class="col-12 col-sm-6 text-center text-sm-start">
+                        <H6 class="patent">Black Ops 4 Demonware Emulator</a>, All Right Reserved. </H6>
+                    </div>
+                    <div class="col-12 col-sm-6 text-center text-sm-end">
+                        <H6 class="patent">Designed By Bodnjenie</H6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
+
+<!----WEBPAGE DESIGNED BY BODNJENIE--->
+

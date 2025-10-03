@@ -1,0 +1,10 @@
+{
+    "httpserver": {
+        "port": 8080,
+        "access_ip": "0.0.0.0"
+    },
+    "Adminpanel": {
+        "port": 8045,
+        "admin_access_ip": "0.0.0.0"
+    }
+}

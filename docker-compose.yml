@@ -1,0 +1,20 @@
+services:
+  wine-bo4-server:
+    image: wine-bo4-server:latest
+    container_name: wine-bo4-server
+    restart: unless-stopped
+    environment:
+      # Optional: if not set, the server will use 8045 by default
+      ADMIN_PORT: 8045
+    ports:
+      # Webserver (required)
+      - "8080:8080/tcp"
+      # Admin panel (configurable with ADMIN_PORT above)
+      - "${ADMIN_PORT:-8045}:${ADMIN_PORT:-8045}/tcp"
+      # Game ports
+      - "3074:3074/tcp"
+      - "3074:3074/udp"
+      - "6542:6542/tcp"
+    volumes:
+      # Mounts the local folder to keep files (logs, configs, etc.)
+      - ./data:/app/data
