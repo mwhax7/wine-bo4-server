@@ -130,4 +130,4 @@ When launching the game with the Black Ops 4 Project Shield Launcher, you must s
 - 📋 Player and lobby details (name, activity, map, etc.)
 
 ## Thanks
-[Project Black Ops 4](https://github.com/project-bo4)
+[BodNJenie](https://github.com/bodnjenie14) for Project Black Ops 4 | Server Files
