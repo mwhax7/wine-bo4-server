@@ -129,5 +129,5 @@ When launching the game with the Black Ops 4 Project Shield Launcher, you must s
 - 🖥️ CPU and memory usage
 - 📋 Player and lobby details (name, activity, map, etc.)
 
-## Thanks
+## Credits
 [BodNJenie](https://github.com/bodnjenie14) for Project Black Ops 4 | Server Files
